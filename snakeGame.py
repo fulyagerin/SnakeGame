@@ -1,3 +1,5 @@
+#Documentation link: https://universitaetstgallen-my.sharepoint.com/:w:/g/personal/fulyanur_gerin_student_unisg_ch/EQUAubGzCFBOtL_Q4BjxFjQB3af7vwlwOwgOz70x6S2UvA?e=oWQYBq
+
 #Libraries
 import pygame
 import sys
@@ -102,7 +104,7 @@ class Game:
         #Score value in the beginning of the game
         self.score_value = 0
         #Speed of the game in miliseconds
-        self.speed = 200  
+        self.speed = 180 
 
     def draw(self):
         #Draw the food and the snake
@@ -127,7 +129,7 @@ class Game:
             #Increase score by 1
             self.score_value += 1
             #After eating the food the speed of the game increases
-            self.speed = max(50, self.speed - 10)  
+            self.speed = max(120, self.speed - 6)  
             pygame.time.set_timer(SNAKE_UPDATE, self.speed)
 
     def check_collision_with_edges(self):
@@ -148,7 +150,7 @@ class Game:
         # Reset the score
         self.score_value = 0
          # Reset speed to starting value
-        self.speed = 200 
+        self.speed = 180
         # Reset the timer
         pygame.time.set_timer(SNAKE_UPDATE, self.speed)  
 
